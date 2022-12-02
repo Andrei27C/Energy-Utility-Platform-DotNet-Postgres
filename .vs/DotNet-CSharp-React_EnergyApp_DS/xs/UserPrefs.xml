@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{FF0412C7-60D4-4919-A503-E48B652049F4}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DotNet-CSharp-React_EnergyApp_DS/Program.cs">
+    <Files>
+      <File FileName="DotNet-CSharp-React_EnergyApp_DS/Properties/launchSettings.json" />
+      <File FileName="DotNet-CSharp-React_EnergyApp_DS/Program.cs" Line="24" Column="4" />
+      <File FileName="DotNet-CSharp-React_EnergyApp_DS/appsettings.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DotNet-CSharp-React_EnergyApp_DS" expanded="True">
+            <Node name="DotNet-CSharp-React_EnergyApp_DS" expanded="True" selected="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.DotNet-CSharp-React__EnergyApp__DS PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,46 @@
+{
+  "Version": 1,
+  "Hash": "QCBw5YmskgXnSIZaAxauSTCuseNdeNss5VlfgNkft7c=",
+  "Source": "DotNet-CSharp-React_EnergyApp_DS",
+  "BasePath": "_content/DotNet-CSharp-React_EnergyApp_DS",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [
+    {
+      "Identity": "/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/obj/Debug/net6.0/scopedcss/bundle/DotNet-CSharp-React_EnergyApp_DS.styles.css",
+      "SourceId": "DotNet-CSharp-React_EnergyApp_DS",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/obj/Debug/net6.0/scopedcss/bundle/",
+      "BasePath": "_content/DotNet-CSharp-React_EnergyApp_DS",
+      "RelativePath": "DotNet-CSharp-React_EnergyApp_DS.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/obj/Debug/net6.0/scopedcss/bundle/DotNet-CSharp-React_EnergyApp_DS.styles.css"
+    },
+    {
+      "Identity": "/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/obj/Debug/net6.0/scopedcss/projectbundle/DotNet-CSharp-React_EnergyApp_DS.bundle.scp.css",
+      "SourceId": "DotNet-CSharp-React_EnergyApp_DS",
+      "SourceType": "Computed",
+      "ContentRoot": "/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/obj/Debug/net6.0/scopedcss/projectbundle/",
+      "BasePath": "_content/DotNet-CSharp-React_EnergyApp_DS",
+      "RelativePath": "DotNet-CSharp-React_EnergyApp_DS.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/obj/Debug/net6.0/scopedcss/projectbundle/DotNet-CSharp-React_EnergyApp_DS.bundle.scp.css"
+    }
+  ]
+}
