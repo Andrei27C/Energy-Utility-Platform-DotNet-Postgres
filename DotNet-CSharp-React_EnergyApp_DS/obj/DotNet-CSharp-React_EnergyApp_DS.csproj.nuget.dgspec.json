@@ -38,6 +38,28 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.21.12, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.51.0, )"
+            },
+            "Grpc.Core": {
+              "target": "Package",
+              "version": "[2.46.5, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.51.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.51.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -70,9 +92,21 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Net.WebSockets": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

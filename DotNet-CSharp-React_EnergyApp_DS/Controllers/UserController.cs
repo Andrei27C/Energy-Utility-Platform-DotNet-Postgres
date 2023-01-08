@@ -27,11 +27,11 @@ public class UserController : ControllerBase
 
     [HttpPost]
     [Route("login")]
-    public async Task<User> LoginUserAsync(UserLoginDTO userLoginViewModel)
+    public async Task<User> LoginUserAsync(UserLoginDTO userLoginDTO)
     {
-        var user = await _context.Users.FirstOrDefaultAsync(x => x.UserName == userLoginViewModel.Username);
+        var user = await _context.Users.FirstOrDefaultAsync(x => x.UserName == userLoginDTO.Username);
         if (user != null)
-            if (user.Password == userLoginViewModel.Password)
+            if (user.Password == userLoginDTO.Password)
                 return user;
         return null;
     }

@@ -67,12 +67,12 @@ public class DeviceMappingController : ControllerBase
         if (_context.DeviceMappings == null)
             return Problem("Entity set 'DeviceManagerContext.DeviceMappings'  is null.");
 
-        DeviceMapping deviceMapping = new DeviceMapping();
+        var deviceMapping = new DeviceMapping();
         deviceMapping.User = _context.Users.Find(deviceMappingDTO.userId);
         deviceMapping.Device = _context.Devices.Find(deviceMappingDTO.deviceId);
-        
+
         _context.DeviceMappings.Add(deviceMapping);
-        
+
         await _context.SaveChangesAsync();
 
         return CreatedAtAction("GetDeviceMapping", new { id = deviceMapping.DeviceMappingId }, deviceMapping);

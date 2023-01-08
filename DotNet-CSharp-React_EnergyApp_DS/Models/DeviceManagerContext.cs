@@ -10,6 +10,8 @@ public class DeviceManagerContext : DbContext
 
     public DbSet<User> Users { get; set; }
     public DbSet<Device> Devices { get; set; }
+
+    public DbSet<ConsumptionPerDevice> ConsumptionPerDevice { get; set; }
     public DbSet<DeviceMapping> DeviceMappings { get; set; }
 
     public DbSet<ConnectMaster>? ConnectMaster { get; set; }

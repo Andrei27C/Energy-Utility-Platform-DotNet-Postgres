@@ -1,71 +1,35 @@
-version: '3.9'
+version: '3.4'
 
-services:
+networks:
+    assignment1-network:
+        external: true
 
-  postgres-integration:
-    container_name: postgres-integration
-    image: postgres
-    volumes:
-      - ./data/db:/var/lib/postgresql/data
-    ports:
-      - "5433:5433"
-    restart: always
-    environment:
-      - POSTGRES_DB=devicemanager
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=admin
-      - POSTGRES_HOST=localhost
-      - POSTGRES_PORT=5433
-    networks:
-        assignment1-network:
-            ipv4_address: 172.16.0.52
-
-  dotnet-integration:
-    container_name: dotnet-integration
+services:            
+  dotnet-csharp-react_energyapp_ds:
+    image: ${DOCKER_REGISTRY-}dotnetcsharpreactenergyappds
     build:
-        context: ./
-        dockerfile: ./DotNet-CSharp-React_EnergyApp_DS/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     restart: always
-    command: "dotnet run /Users/acsatlos/Projects/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/"
+    command: >
+        bash -c "dotnet ef migrations add FirstMigration
+        && dotnet ef database update
+        && dotnet run /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS"
     volumes:
       - .:/code
     ports:
       - "5024:5024"
+      - "5025:5025"
     environment:
       - POSTGRES_DB=devicemanager
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin
       - POSTGRES_HOST=postgres-integration
-      - POSTGRES_PORT=5433
+      - POSTGRES_PORT=5432
+      - ASPNETCORE_HTTP_PORT=https://+:5025
+      - ASPNETCORE_URLS=http://+:5024
     depends_on:
       - postgres-integration
     networks:
         assignment1-network:
             ipv4_address: 172.16.0.53
-
-  react-integration:
-    build:
-      context: ./
-      dockerfile: ./frontend/Dockerfile
-    container_name: react-integration
-    restart: always
-    ports:
-      - 3001:80
-    networks:
-      assignment1-network:
-         ipv4_address: 172.16.0.54
-
-volumes:
-    postgres-integration:
-        driver:
-            local
-    dotnet-integration:
-        driver:
-            local
-    react-integration:
-        driver:
-            local
-
-networks:
-  assignment1-network:
-    external: true

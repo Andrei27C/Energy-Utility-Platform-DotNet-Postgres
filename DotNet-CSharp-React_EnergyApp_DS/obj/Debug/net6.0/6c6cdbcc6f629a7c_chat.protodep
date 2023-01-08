@@ -1,0 +1,2 @@
+obj/Debug/net6.0/ChatService/Chat.cs \
+obj/Debug/net6.0/ChatService/ChatGrpc.cs: ChatService/chat.proto

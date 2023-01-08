@@ -4,42 +4,69 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace>DotNet_CSharp_React_EnergyApp_DS</RootNamespace>
+        <!--        <RootNamespace>DotNet_CSharp_React_EnergyApp_DS</RootNamespace>-->
+        <!--        <UserSecretsId>8b4132fc-c496-4bc0-bbbf-93b21be0de2e</UserSecretsId>-->
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <!--        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>-->
+        <!--        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>-->
+        <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+        <!--        <OutputType>Library</OutputType>-->
+
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'DotNet_CSharp_React_EnergyApp_DS' " />
+
     <ItemGroup>
+        <None Remove="ChatService/chat.proto" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.21.12" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.51.0" />
+        <PackageReference Include="Grpc.Core" Version="2.46.5" />
+        <PackageReference Include="Grpc.Net.Client" Version="2.51.0" />
+        <PackageReference Include="Grpc.Tools" Version="2.51.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.11"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.11" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3"/>
-        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10"/>
-        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0"/>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0" />
+        <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+        <PackageReference Include="RestSharp" Version="108.0.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="System.Net.WebSockets" Version="4.3.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Migrations"/>
+        <Folder Include="Migrations" />
     </ItemGroup>
 
     <ItemGroup>
-        <_ContentIncludedByDefault Remove="Views\Device\Create.cshtml"/>
-        <_ContentIncludedByDefault Remove="Views\Device\Delete.cshtml"/>
-        <_ContentIncludedByDefault Remove="Views\Device\Details.cshtml"/>
-        <_ContentIncludedByDefault Remove="Views\Device\Edit.cshtml"/>
-        <_ContentIncludedByDefault Remove="Views\Device\Index.cshtml"/>
-        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Create.cshtml"/>
-        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Delete.cshtml"/>
-        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Details.cshtml"/>
-        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Edit.cshtml"/>
-        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Index.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Device\Create.cshtml" />
+        <_ContentIncludedByDefault Remove="Views\Device\Delete.cshtml" />
+        <_ContentIncludedByDefault Remove="Views\Device\Details.cshtml" />
+        <_ContentIncludedByDefault Remove="Views\Device\Edit.cshtml" />
+        <_ContentIncludedByDefault Remove="Views\Device\Index.cshtml" />
+        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Create.cshtml" />
+        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Delete.cshtml" />
+        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Details.cshtml" />
+        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Edit.cshtml" />
+        <_ContentIncludedByDefault Remove="Views\DeviceMapping\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Protobuf Include="ChatService\chat.proto" GrpcServices="Server" />
     </ItemGroup>
 
 </Project>
