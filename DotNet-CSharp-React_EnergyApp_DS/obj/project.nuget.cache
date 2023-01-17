@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8PbNJ4SGNit9WampPpHGaIohhME4rFFgyp2iwJW73h03NlNpb3XBnrTr1ysFN1K4Hv2jFOKvYqM0cx8TmqI+vg==",
+  "dgSpecHash": "Jmt9IznKUZASkAUzzv5tLBhUp3ril53+3KRkrS8iCzFa6mfgOAttjYOz1ughvqSmmsxmtd7s4Jxs75AN+7/L8A==",
   "success": true,
   "projectFilePath": "/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/Users/acsatlos/.nuget/packages/grpc.aspnetcore/2.51.0/grpc.aspnetcore.2.51.0.nupkg.sha512",
     "/Users/acsatlos/.nuget/packages/grpc.aspnetcore.server/2.51.0/grpc.aspnetcore.server.2.51.0.nupkg.sha512",
     "/Users/acsatlos/.nuget/packages/grpc.aspnetcore.server.clientfactory/2.51.0/grpc.aspnetcore.server.clientfactory.2.51.0.nupkg.sha512",
+    "/Users/acsatlos/.nuget/packages/grpc.aspnetcore.web/2.51.0/grpc.aspnetcore.web.2.51.0.nupkg.sha512",
     "/Users/acsatlos/.nuget/packages/grpc.core/2.46.5/grpc.core.2.46.5.nupkg.sha512",
     "/Users/acsatlos/.nuget/packages/grpc.core.api/2.51.0/grpc.core.api.2.51.0.nupkg.sha512",
     "/Users/acsatlos/.nuget/packages/grpc.net.client/2.51.0/grpc.net.client.2.51.0.nupkg.sha512",

@@ -12,6 +12,8 @@ namespace GrpcChat.Server
         private readonly ILogger<ChatService> _logger;
         private readonly Dictionary<string, IServerStreamWriter<ChatMessage>> _subscriptions = new Dictionary<string, IServerStreamWriter<ChatMessage>>();
 
+        private static MessagesListSingleton _messages = MessagesListSingleton.Instance;
+        
         public ChatService(ILogger<ChatService> logger)
         {
             _logger = logger;
@@ -30,21 +32,61 @@ namespace GrpcChat.Server
                 await _subscriptions[receiver].WriteAsync(request);
             }
 
+            ChatMessage msg = new ChatMessage();
+            msg.Sender = request.Sender;
+            msg.Receiver = request.Receiver;
+            msg.Message = request.Message;
+            _messages.List.Add(msg);
+            foreach (var chatMessage in _messages.List)
+            {
+                Console.WriteLine("123123123-------" + chatMessage);
+            }
             return new Empty();
         }
-
+        
         public override async Task ReceiveMessage(
-            Client request, 
-            IServerStreamWriter<ChatMessage> responseStream, 
+            Client client,
+            IServerStreamWriter<ChatMessage> responseStream,
             ServerCallContext context)
         {
-            var username = request.Username;
+            Console.WriteLine("Stream opened by " + client.Username);
+            _subscriptions.Add(client.Username, responseStream);
 
-            _logger.LogInformation($"Received subscribe request from client '{username}'");
-
-            _subscriptions.Add(username, responseStream);
-
-            await Task.CompletedTask;
+            // while (await responseStream.WriteAsync(_messages.List)) {  }
+            foreach (var message in _messages.List)
+            {
+                await responseStream.WriteAsync(message);
+            }
         }
+
+        
+        // public override async Task<List<ChatMessage>> ReceiveMessage(
+        //     Client client,
+        //     IServerStreamWriter<ChatMessage> responseStream,
+        //     ServerCallContext context)
+        // {
+        //     Console.WriteLine("Stream opened by " + client.Username);
+        //     
+        //     
+        //     /*if (!Connection.grpcChatConnections.TryAdd(client.Username, responseStream))
+        //     {
+        //         Console.WriteLine("Stream opened by " + client.Username + " could not be added to dictionary!");
+        //     }
+        //     */
+        //     
+        //     await Task.CompletedTask;
+        //     Console.WriteLine("receiving the messages!");
+        //     foreach (ChatMessage chatMessage in _messages.List)
+        //     {
+        //         Console.WriteLine(chatMessage);
+        //         // Console.WriteLine(chatMessage.ToString());
+        //     }
+        //     return _messages.List;
+        //
+        //     /*while (true)
+        //     {
+        //         
+        //     }*/
+        // }
     }
 }

@@ -316,7 +316,6 @@
 /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/DotNet-CSharp-React_EnergyApp_DS.deps.json
 /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/DotNet-CSharp-React_EnergyApp_DS.runtimeconfig.json
 /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/DotNet-CSharp-React_EnergyApp_DS.dll
-/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/ref/DotNet-CSharp-React_EnergyApp_DS.dll
 /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/DotNet-CSharp-React_EnergyApp_DS.pdb
 /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/Azure.Core.dll
 /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/Azure.Identity.dll
@@ -635,3 +634,5 @@
 /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/Grpc.Net.Client.dll
 /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/Grpc.Net.ClientFactory.dll
 /Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/Grpc.Net.Common.dll
+/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/bin/Debug/net6.0/Grpc.AspNetCore.Web.dll
+/Users/acsatlos/Projects/UTCN-DS-Project/dotnet-backend/DotNet-CSharp-React_EnergyApp_DS/DotNet-CSharp-React_EnergyApp_DS/obj/Debug/net6.0/refint/DotNet-CSharp-React_EnergyApp_DS.dll
