@@ -116,7 +116,11 @@ internal class Consumer
             channel.BasicConsume(queueName, true, consumer);
 
             Console.WriteLine(" Press [enter] to exit.");
-            Console.ReadLine();
+            // Console.ReadLine()
+            while (true)
+            {
+                
+            }
         }
     }
 

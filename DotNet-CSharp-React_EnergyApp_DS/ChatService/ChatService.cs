@@ -57,36 +57,11 @@ namespace GrpcChat.Server
             {
                 await responseStream.WriteAsync(message);
             }
+            while (true)
+            {
+                
+            }
+            
         }
-
-        
-        // public override async Task<List<ChatMessage>> ReceiveMessage(
-        //     Client client,
-        //     IServerStreamWriter<ChatMessage> responseStream,
-        //     ServerCallContext context)
-        // {
-        //     Console.WriteLine("Stream opened by " + client.Username);
-        //     
-        //     
-        //     /*if (!Connection.grpcChatConnections.TryAdd(client.Username, responseStream))
-        //     {
-        //         Console.WriteLine("Stream opened by " + client.Username + " could not be added to dictionary!");
-        //     }
-        //     */
-        //     
-        //     await Task.CompletedTask;
-        //     Console.WriteLine("receiving the messages!");
-        //     foreach (ChatMessage chatMessage in _messages.List)
-        //     {
-        //         Console.WriteLine(chatMessage);
-        //         // Console.WriteLine(chatMessage.ToString());
-        //     }
-        //     return _messages.List;
-        //
-        //     /*while (true)
-        //     {
-        //         
-        //     }*/
-        // }
     }
 }
